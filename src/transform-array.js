@@ -15,6 +15,7 @@ const { NotImplementedError } = require('../extensions/index.js');
  */
 function transform(arr) {
   if (!Array.isArray(arr)) throw Error ("'arr' parameter must be an instance of the Array!");
+  
   arr = arr.map((el, ind) => {
     if (arr[ind - 1] === '--discard-next') {
       el = '--discard-next';
